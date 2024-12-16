@@ -1,0 +1,28 @@
+[1734354513] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3600, Bitmart: 2.3603, Gap: -0.0127%
+[1734354513] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354513] Closing positions. Entry Gap: -0.0127%, Current Gap: -0.0254%, Reduction: 0.0127%
+[1734354513] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354513] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3596, Bitmart: 2.3603, Gap: -0.0297%
+[1734354513] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354513] Closing positions. Entry Gap: -0.0297%, Current Gap: -0.0424%, Reduction: 0.0127%
+[1734354513] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354513] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3595, Bitmart: 2.3600, Gap: -0.0212%
+[1734354514] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354514] Closing positions. Entry Gap: -0.0212%, Current Gap: -0.0339%, Reduction: 0.0127%
+[1734354514] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354514] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3593, Bitmart: 2.3600, Gap: -0.0297%
+[1734354514] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354514] Closing positions. Entry Gap: -0.0297%, Current Gap: -0.0169%, Reduction: 0.0127%
+[1734354514] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354514] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3596, Bitmart: 2.3600, Gap: -0.0169%
+[1734354514] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354514] Closing positions. Entry Gap: -0.0169%, Current Gap: -0.0042%, Reduction: 0.0127%
+[1734354514] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734354514] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3599, Bitmart: 2.3596, Gap: 0.0127%
+[1734354514] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Not found", code: 30000 }

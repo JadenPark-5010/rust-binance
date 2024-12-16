@@ -35,9 +35,9 @@ pub async fn execute_trade(
     let mut state = shared_state.lock().await;
     let percent_diff = ((binance_price - bitmart_price) / bitmart_price) * 100.0;
 
-    if !state.is_trading && percent_diff.abs() > 0.3 {
+    if !state.is_trading && percent_diff.abs() > 0.01 {
         let entry_message = format!(
-            "Gap exceeds 0.3%. Executing trade.\nBinance: {:.4}, Bitmart: {:.4}, Gap: {:.4}%",
+            "Gap exceeds 0.01%. Executing trade.\nBinance: {:.4}, Bitmart: {:.4}, Gap: {:.4}%",
             binance_price, bitmart_price, percent_diff
         );
         println!("{}", entry_message);
@@ -46,7 +46,7 @@ pub async fn execute_trade(
         state.is_trading = true;
         state.entry_gap = Some(percent_diff);
 
-        if percent_diff > 0.3 {
+        if percent_diff > 0.01 {
             state.binance_position = Some("SHORT".to_string());
             state.bitmart_position = Some("LONG".to_string());
 
@@ -66,7 +66,7 @@ pub async fn execute_trade(
                 }
                 Err(e) => eprintln!("[Order] Bitmart Long Order Failed: {}", e),
             }
-        } else if percent_diff < -0.3 {
+        } else if percent_diff < -0.01 {
             state.binance_position = Some("LONG".to_string());
             state.bitmart_position = Some("SHORT".to_string());
 
@@ -91,7 +91,7 @@ pub async fn execute_trade(
         if let Some(entry_gap) = state.entry_gap {
             let gap_reduction = (entry_gap - percent_diff).abs();
 
-            if gap_reduction >= 0.3 {
+            if gap_reduction >= 0.01 {
                 let close_message = format!(
                     "Closing positions. Entry Gap: {:.4}%, Current Gap: {:.4}%, Reduction: {:.4}%",
                     entry_gap, percent_diff, gap_reduction
