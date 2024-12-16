@@ -1,0 +1,10 @@
+/Users/jaden/Desktop/rust-quant/btrap-quant/target/debug/deps/libobjc2_encode-43c11886edc6c6a4.rmeta: /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/lib.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/encoding.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/encoding_box.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/helper.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/parse.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/static_str.rs
+
+/Users/jaden/Desktop/rust-quant/btrap-quant/target/debug/deps/objc2_encode-43c11886edc6c6a4.d: /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/lib.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/encoding.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/encoding_box.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/helper.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/parse.rs /Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/static_str.rs
+
+/Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/lib.rs:
+/Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/encoding.rs:
+/Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/encoding_box.rs:
+/Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/helper.rs:
+/Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/parse.rs:
+/Users/jaden/.cargo/registry/src/index.crates.io-6f17d22bba15001f/objc2-encode-4.0.3/src/static_str.rs:
