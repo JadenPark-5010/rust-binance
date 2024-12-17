@@ -8,6 +8,8 @@ use handle_price::fetch_price;
 use crate::types::{SharedState, SharedPrices, TradingState};
 use futures_util::{SinkExt, StreamExt};
 use tokio_tungstenite::connect_async;
+use tokio::task;
+use futures::join;
 
 // Library
 use std::sync::Arc;
@@ -26,7 +28,7 @@ fn get_kst_time() -> String {
     now_kst.format("%Y-%m-%d %H:%M:%S%.3f").to_string() // 밀리초 단위로 포맷
 }
 
-#[derive(Debug, serde::Deserialize)]
+#[derive(Clone, Debug, serde::Deserialize)]
 pub struct DepthAllItem {
     pub price: String, // 가격
     pub vol: String,   // 수량
@@ -96,6 +98,114 @@ pub async fn fetch_bitmart_depth(
         }
     }
 }
+
+async fn calculate_avg_fill_price_multithreaded(
+    asks: &Vec<DepthAllItem>, // 롱 포지션용 ASK 데이터
+    bids: &Vec<DepthAllItem>, // 숏 포지션용 BID 데이터
+    target_amount: f64,       // 시장가 체결에 사용할 목표 금액
+) -> (f64, f64) {
+    use tokio::task;
+
+    // 롱(ASK) 포지션 계산
+    let long_task = task::spawn({
+        let asks = asks.clone();
+        async move {
+            let mut remaining_amount = target_amount;
+            let mut total_price = 0.0;
+            let mut total_volume = 0.0;
+
+            for entry in asks.iter() {
+                let price: f64 = entry.price.parse().unwrap_or(0.0);
+                let volume: f64 = entry.vol.parse().unwrap_or(0.0);
+                let cost = price * volume;
+
+                if remaining_amount <= 0.0 {
+                    break;
+                }
+
+                if cost <= remaining_amount {
+                    total_price += cost;
+                    total_volume += volume;
+                    remaining_amount -= cost;
+                } else {
+                    let filled_volume = remaining_amount / price;
+                    total_price += remaining_amount;
+                    total_volume += filled_volume;
+                    break;
+                }
+            }
+
+            if total_volume > 0.0 {
+                total_price / total_volume
+            } else {
+                0.0
+            }
+        }
+    });
+
+    // 숏(BID) 포지션 계산
+    let short_task = task::spawn({
+        let bids = bids.clone();
+        async move {
+            let mut remaining_amount = target_amount;
+            let mut total_price = 0.0;
+            let mut total_volume = 0.0;
+
+            for entry in bids.iter() {
+                let price: f64 = entry.price.parse().unwrap_or(0.0);
+                let volume: f64 = entry.vol.parse().unwrap_or(0.0);
+                let cost = price * volume;
+
+                if remaining_amount <= 0.0 {
+                    break;
+                }
+
+                if cost <= remaining_amount {
+                    total_price += cost;
+                    total_volume += volume;
+                    remaining_amount -= cost;
+                } else {
+                    let filled_volume = remaining_amount / price;
+                    total_price += remaining_amount;
+                    total_volume += filled_volume;
+                    break;
+                }
+            }
+
+            if total_volume > 0.0 {
+                total_price / total_volume
+            } else {
+                0.0
+            }
+        }
+    });
+
+    // 두 태스크 결과를 동시에 가져옴
+    let (avg_long_price, avg_short_price) = tokio::join!(long_task, short_task);
+    (avg_long_price.unwrap_or(0.0), avg_short_price.unwrap_or(0.0))
+}
+
+
+async fn calculate_position_value(shared_market_depth: Arc<Mutex<HashMap<String, Vec<DepthAllItem>>>>) {
+    // BitMart Depth 데이터 접근
+    let market_depth = shared_market_depth.lock().await;
+
+    // ASK와 BID 데이터 가져오기
+    let asks = market_depth.get("BitMart_Asks").cloned().unwrap_or_default(); // 롱 포지션
+    let bids = market_depth.get("BitMart_Bids").cloned().unwrap_or_default(); // 숏 포지션
+
+    // 목표 금액 (예: 1000달러)
+    let target_amount = 1000.0;
+
+    // 평균 체결 가격 계산
+    let (avg_long_price, avg_short_price) =
+        calculate_avg_fill_price_multithreaded(&asks, &bids, target_amount).await;
+
+    println!("평균 롱 체결 가격 (ASK): {}", avg_long_price);
+    println!("평균 숏 체결 가격 (BID): {}", avg_short_price);
+}
+
+
 
 #[derive(Default)]
 struct TradingApp {
@@ -286,6 +396,14 @@ async fn main() {
         "wss://openapi-ws-v2.bitmart.com/api?protocol=1.1",
         bitmart_market_depth,
     ));
+
+    let market_depth_clone = Arc::clone(&shared_market_depth);
+    tokio::spawn(async move {
+        loop {
+            calculate_position_value(market_depth_clone.clone()).await;
+            tokio::time::sleep(std::time::Duration::from_secs(1)).await;
+        }
+    });
 
     // GUI 애플리케이션 실행
     let prices = Arc::clone(&shared_prices);
