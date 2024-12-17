@@ -26,3 +26,179 @@ Binance: 2.3596, Bitmart: 2.3600, Gap: -0.0169%
 [1734354514] Gap exceeds 0.01%. Executing trade.
 Binance: 2.3599, Bitmart: 2.3596, Gap: 0.0127%
 [1734354514] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Not found", code: 30000 }
+[1734358501] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3713, Bitmart: 2.3716, Gap: -0.0126%
+[1734358502] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Header X-BM-SIGN is wrong", code: 30005 }
+[1734358502] Closing positions. Entry Gap: -0.0126%, Current Gap: -0.0253%, Reduction: 0.0126%
+[1734358502] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Header X-BM-SIGN is wrong", code: 30005 }
+[1734358502] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3711, Bitmart: 2.3716, Gap: -0.0211%
+[1734358502] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Header X-BM-SIGN is wrong", code: 30005 }
+[1734358502] Closing positions. Entry Gap: -0.0211%, Current Gap: 0.0042%, Reduction: 0.0253%
+[1734358502] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Header X-BM-SIGN is wrong", code: 30005 }
+[1734358502] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3707, Bitmart: 2.3710, Gap: -0.0127%
+[1734358502] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Header X-BM-SIGN is wrong", code: 30005 }
+[1734358727] Gap exceeds 0.01%. Executing trade.
+Binance: 2.3729, Bitmart: 2.3733, Gap: -0.0169%
+[1734358727] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Header X-BM-SIGN is wrong", code: 30005 }
+[1734359861] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0430, Bitmart: 217.0200, Gap: 0.0106%
+[1734359861] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Header X-BM-SIGN is wrong", code: 30005 }
+[1734360364] Gap exceeds 0.01%. Executing trade.
+Binance: 217.2600, Bitmart: 217.2300, Gap: 0.0138%
+[1734360364] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Header X-BM-SIGN is wrong", code: 30005 }
+[1734360440] Gap exceeds 0.01%. Executing trade.
+Binance: 217.7800, Bitmart: 217.7500, Gap: 0.0138%
+[1734360440] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Response is empty", code: 30020 }
+[1734360440] Closing positions. Entry Gap: 0.0138%, Current Gap: 0.0276%, Reduction: 0.0138%
+[1734360441] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Response is empty", code: 30020 }
+[1734360441] Gap exceeds 0.01%. Executing trade.
+Binance: 217.8200, Bitmart: 217.7500, Gap: 0.0321%
+[1734360441] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Response is empty", code: 30020 }
+[1734360441] Closing positions. Entry Gap: 0.0321%, Current Gap: 0.0184%, Reduction: 0.0138%
+[1734360441] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Response is empty", code: 30020 }
+[1734360441] Gap exceeds 0.01%. Executing trade.
+Binance: 217.7800, Bitmart: 217.7500, Gap: 0.0138%
+[1734360441] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Response is empty", code: 30020 }
+[1734360441] Closing positions. Entry Gap: 0.0138%, Current Gap: 0.0000%, Reduction: 0.0138%
+[1734360441] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Response is empty", code: 30020 }
+[1734360441] Gap exceeds 0.01%. Executing trade.
+Binance: 217.7800, Bitmart: 217.7500, Gap: 0.0138%
+[1734360829] Gap exceeds 0.01%. Executing trade.
+Binance: 217.7700, Bitmart: 217.7400, Gap: 0.0138%
+[1734360829] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Invalid parameter", code: 40011 }
+[1734360829] Closing positions. Entry Gap: 0.0138%, Current Gap: -0.0046%, Reduction: 0.0184%
+[1734360830] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Invalid parameter", code: 40011 }
+[1734360912] Gap exceeds 0.01%. Executing trade.
+Binance: 217.4800, Bitmart: 217.4500, Gap: 0.0138%
+[1734360912] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Invalid parameter", code: 40011 }
+[1734360912] Closing positions. Entry Gap: 0.0138%, Current Gap: 0.0276%, Reduction: 0.0138%
+[1734360912] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Invalid parameter", code: 40011 }
+[1734360913] Gap exceeds 0.01%. Executing trade.
+Binance: 217.5100, Bitmart: 217.4500, Gap: 0.0276%
+[1734361654] Gap exceeds 0.01%. Executing trade.
+Binance: 216.1900, Bitmart: 216.2200, Gap: -0.0139%
+[1734361654] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Invalid parameter", code: 40011 }
+[1734361655] Closing positions. Entry Gap: -0.0139%, Current Gap: 0.0000%, Reduction: 0.0139%
+[1734361655] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Invalid parameter", code: 40011 }
+[1734361929] Gap exceeds 0.01%. Executing trade.
+Binance: 216.7600, Bitmart: 216.7900, Gap: -0.0138%
+[1734361929] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361929] Closing positions. Entry Gap: -0.0138%, Current Gap: 0.0231%, Reduction: 0.0369%
+[1734361929] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361929] Gap exceeds 0.01%. Executing trade.
+Binance: 216.7500, Bitmart: 216.7000, Gap: 0.0231%
+[1734361929] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361929] Closing positions. Entry Gap: 0.0231%, Current Gap: -0.0323%, Reduction: 0.0554%
+[1734361930] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361930] Gap exceeds 0.01%. Executing trade.
+Binance: 216.7700, Bitmart: 216.8200, Gap: -0.0231%
+[1734361930] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361930] Closing positions. Entry Gap: -0.0231%, Current Gap: 0.0092%, Reduction: 0.0323%
+[1734361930] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361930] Gap exceeds 0.01%. Executing trade.
+Binance: 216.7700, Bitmart: 216.7400, Gap: 0.0138%
+[1734361967] Gap exceeds 0.01%. Executing trade.
+Binance: 217.1100, Bitmart: 217.1400, Gap: -0.0138%
+[1734361967] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361967] Closing positions. Entry Gap: -0.0138%, Current Gap: -0.0276%, Reduction: 0.0138%
+[1734361968] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361968] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0600, Bitmart: 217.0200, Gap: 0.0184%
+[1734361968] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361968] Closing positions. Entry Gap: 0.0184%, Current Gap: -0.0230%, Reduction: 0.0415%
+[1734361968] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361968] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0500, Bitmart: 217.1100, Gap: -0.0276%
+[1734361968] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361968] Closing positions. Entry Gap: -0.0276%, Current Gap: 0.0092%, Reduction: 0.0369%
+[1734361968] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361968] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0600, Bitmart: 217.0300, Gap: 0.0138%
+[1734361969] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361969] Closing positions. Entry Gap: 0.0138%, Current Gap: -0.0230%, Reduction: 0.0369%
+[1734361969] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361969] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0800, Bitmart: 217.1200, Gap: -0.0184%
+[1734361969] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361969] Closing positions. Entry Gap: -0.0184%, Current Gap: 0.0138%, Reduction: 0.0322%
+[1734361969] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361969] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0700, Bitmart: 217.0400, Gap: 0.0138%
+[1734361970] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361970] Closing positions. Entry Gap: 0.0138%, Current Gap: -0.0276%, Reduction: 0.0415%
+[1734361970] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361970] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0700, Bitmart: 217.1200, Gap: -0.0230%
+[1734361970] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361970] Closing positions. Entry Gap: -0.0230%, Current Gap: -0.0046%, Reduction: 0.0184%
+[1734361970] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361970] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0800, Bitmart: 217.1200, Gap: -0.0184%
+[1734361970] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361970] Closing positions. Entry Gap: -0.0184%, Current Gap: 0.0230%, Reduction: 0.0415%
+[1734361971] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361971] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0700, Bitmart: 217.0200, Gap: 0.0230%
+[1734361971] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361971] Closing positions. Entry Gap: 0.0230%, Current Gap: 0.0369%, Reduction: 0.0138%
+[1734361971] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361971] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0800, Bitmart: 216.9900, Gap: 0.0415%
+[1734361971] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361971] Closing positions. Entry Gap: 0.0415%, Current Gap: -0.0046%, Reduction: 0.0461%
+[1734361971] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361971] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0700, Bitmart: 216.9900, Gap: 0.0369%
+[1734361972] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361972] Closing positions. Entry Gap: 0.0369%, Current Gap: -0.0138%, Reduction: 0.0507%
+[1734361972] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361972] Gap exceeds 0.01%. Executing trade.
+Binance: 217.0500, Bitmart: 217.0900, Gap: -0.0184%
+[1734361972] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000 }
+[1734361972] Closing positions. Entry Gap: -0.0184%, Current Gap: 0.0230%, Reduction: 0.0415%
+[1734402150] Gap exceeds 0.02%. Executing trade.
+Binance: 214.5400, Bitmart: 214.5900, Gap: -0.0233%
+[1734402211] Gap exceeds 0.02%. Executing trade.
+Binance: 214.4500, Bitmart: 214.3900, Gap: 0.0280%
+[1734402441] Gap exceeds 0.02%. Executing trade.
+Binance: 214.6500, Bitmart: 214.6000, Gap: 0.0233%
+[1734402442] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "IP is forbidden. We recommend enabling IP whitelist for API trading. After that reauth your account", code: 30010, data: Object {} }
+[1734402537] Gap exceeds 0.02%. Executing trade.
+Binance: 214.8300, Bitmart: 214.8800, Gap: -0.0233%
+[1734402538] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "IP is forbidden. We recommend enabling IP whitelist for API trading. After that reauth your account", code: 30010, data: Object {} }
+[1734402677] Gap exceeds 0.02%. Executing trade.
+Binance: 214.8800, Bitmart: 214.8300, Gap: 0.0233%
+[1734402678] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "IP is forbidden. We recommend enabling IP whitelist for API trading. After that reauth your account", code: 30010, data: Object {} }
+[1734402687] Closing positions. Entry Gap: 0.0233%, Current Gap: -0.0186%, Reduction: 0.0419%
+[1734402687] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "IP is forbidden. We recommend enabling IP whitelist for API trading. After that reauth your account", code: 30010, data: Object {} }
+[1734402852] Gap exceeds 0.02%. Executing trade.
+Binance: 214.5700, Bitmart: 214.5200, Gap: 0.0233%
+[1734402853] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000047948985316), "price": String("market price")} }
+[1734403668] Gap exceeds 0.02%. Executing trade.
+Binance: 214.2700, Bitmart: 214.3200, Gap: -0.0233%
+[1734403670] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000047948996022), "price": String("market price")} }
+[1734403670] Closing positions. Entry Gap: -0.0233%, Current Gap: 0.2386%, Reduction: 0.2619%
+[1734403670] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000047952985074), "price": String("market price")} }
+[1734403670] Gap exceeds 0.02%. Executing trade.
+Binance: 214.2600, Bitmart: 213.7600, Gap: 0.2339%
+[1734403670] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000047952985083), "price": String("market price")} }
+[1734403670] Closing positions. Entry Gap: 0.2339%, Current Gap: 0.1918%, Reduction: 0.0421%
+[1734403671] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000047948996062), "price": String("market price")} }
+[1734403671] Gap exceeds 0.02%. Executing trade.
+Binance: 214.1700, Bitmart: 213.7900, Gap: 0.1777%
+[1734403958] Gap exceeds 0.02%. Executing trade.
+Binance: 213.5900, Bitmart: 213.6400, Gap: -0.0234%
+[1734403959] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000047952988547), "price": String("market price")} }
+[1734403960] Closing positions. Entry Gap: -0.0234%, Current Gap: 0.0187%, Reduction: 0.0421%
+[1734403961] [Order] Bitmart Close Short Position Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000047952988560), "price": String("market price")} }
+[1734403995] Gap exceeds 0.02%. Executing trade.
+Binance: 213.6900, Bitmart: 213.6400, Gap: 0.0234%
+[1734403996] [Order] Bitmart Long Order Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000048341000021), "price": String("market price")} }
+[1734403996] Closing positions. Entry Gap: 0.0234%, Current Gap: -0.0234%, Reduction: 0.0468%
+[1734403996] [Order] Binance Close Short Position Response: BinanceOrderResponse { symbol: "SOLUSDT", orderId: 86296699029, avgPrice: "0.00" }
+[1734403997] [Order] Bitmart Close Long Position Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000047952988961), "price": String("market price")} }
+[1734403997] Gap exceeds 0.02%. Executing trade.
+Binance: 213.7000, Bitmart: 213.7500, Gap: -0.0234%
+[1734403997] [Order] Binance Long Order Response: BinanceOrderResponse { symbol: "SOLUSDT", orderId: 86296700398, avgPrice: "0.00" }

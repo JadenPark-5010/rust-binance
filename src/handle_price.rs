@@ -4,6 +4,7 @@ use futures_util::{stream::StreamExt, SinkExt};
 use tokio_tungstenite::{connect_async, tungstenite::protocol::Message};
 use serde_json::Value;
 use std::sync::Arc;
+
 use crate::order::Order;
 
 async fn handle_price_update(
@@ -39,7 +40,7 @@ pub async fn fetch_price(
             if exchange_name == "Bitmart" {
                 let sub_msg = serde_json::json!({
                     "action": "subscribe",
-                    "args": ["futures/trade:XRPUSDT"]
+                    "args": ["futures/trade:SOLUSDT"]
                 });
                 if let Err(e) = write.send(Message::Text(sub_msg.to_string())).await {
                     eprintln!("Failed to send subscription message to {}: {}", exchange_name, e);

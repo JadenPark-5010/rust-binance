@@ -35,9 +35,9 @@ pub async fn execute_trade(
     let mut state = shared_state.lock().await;
     let percent_diff = ((binance_price - bitmart_price) / bitmart_price) * 100.0;
 
-    if !state.is_trading && percent_diff.abs() > 0.01 {
+    if !state.is_trading && percent_diff.abs() > 0.1 {
         let entry_message = format!(
-            "Gap exceeds 0.01%. Executing trade.\nBinance: {:.4}, Bitmart: {:.4}, Gap: {:.4}%",
+            "Gap exceeds 0.1%. Executing trade.\nBinance: {:.4}, Bitmart: {:.4}, Gap: {:.4}%",
             binance_price, bitmart_price, percent_diff
         );
         println!("{}", entry_message);
@@ -46,11 +46,11 @@ pub async fn execute_trade(
         state.is_trading = true;
         state.entry_gap = Some(percent_diff);
 
-        if percent_diff > 0.01 {
+        if percent_diff > 0.1 {
             state.binance_position = Some("SHORT".to_string());
             state.bitmart_position = Some("LONG".to_string());
 
-            match order.place_market_order_binance("XRPUSDT", "SELL", 100.0).await {
+            match order.place_market_order_binance("SOLUSDT", "SELL", 10.0).await {
                 Ok(response) => {
                     let message = format!("[Order] Binance Short Order Response: {:?}", response);
                     println!("{}", message);
@@ -58,7 +58,7 @@ pub async fn execute_trade(
                 }
                 Err(e) => eprintln!("[Order] Binance Short Order Failed: {}", e),
             }
-            match order.place_market_order_bitmart("XRPUSDT", "buy", 100.0).await {
+            match order.place_market_order_bitmart("SOLUSDT", 1, 10).await {
                 Ok(response) => {
                     let message = format!("[Order] Bitmart Long Order Response: {:?}", response);
                     println!("{}", message);
@@ -66,11 +66,11 @@ pub async fn execute_trade(
                 }
                 Err(e) => eprintln!("[Order] Bitmart Long Order Failed: {}", e),
             }
-        } else if percent_diff < -0.01 {
+        } else if percent_diff < -0.1 {
             state.binance_position = Some("LONG".to_string());
             state.bitmart_position = Some("SHORT".to_string());
 
-            match order.place_market_order_binance("XRPUSDT", "BUY", 100.0).await {
+            match order.place_market_order_binance("SOLUSDT", "BUY", 10.0).await {
                 Ok(response) => {
                     let message = format!("[Order] Binance Long Order Response: {:?}", response);
                     println!("{}", message);
@@ -78,7 +78,7 @@ pub async fn execute_trade(
                 }
                 Err(e) => eprintln!("[Order] Binance Long Order Failed: {}", e),
             }
-            match order.place_market_order_bitmart("XRPUSDT", "sell", 100.0).await {
+            match order.place_market_order_bitmart("SOLUSDT", 4, 10).await {
                 Ok(response) => {
                     let message = format!("[Order] Bitmart Short Order Response: {:?}", response);
                     println!("{}", message);
@@ -91,7 +91,7 @@ pub async fn execute_trade(
         if let Some(entry_gap) = state.entry_gap {
             let gap_reduction = (entry_gap - percent_diff).abs();
 
-            if gap_reduction >= 0.01 {
+            if gap_reduction >= 0.1 {
                 let close_message = format!(
                     "Closing positions. Entry Gap: {:.4}%, Current Gap: {:.4}%, Reduction: {:.4}%",
                     entry_gap, percent_diff, gap_reduction
@@ -103,7 +103,7 @@ pub async fn execute_trade(
                     (&state.binance_position, &state.bitmart_position)
                 {
                     if binance_position == "SHORT" {
-                        match order.place_market_order_binance("XRPUSDT", "BUY", 100.0).await {
+                        match order.place_market_order_binance("SOLUSDT", "BUY", 10.0).await {
                             Ok(response) => {
                                 let message =
                                     format!("[Order] Binance Close Short Position Response: {:?}", response);
@@ -113,7 +113,7 @@ pub async fn execute_trade(
                             Err(e) => eprintln!("[Order] Binance Close Short Position Failed: {}", e),
                         }
                     } else if binance_position == "LONG" {
-                        match order.place_market_order_binance("XRPUSDT", "SELL", 100.0).await {
+                        match order.place_market_order_binance("SOLUSDT", "SELL", 10.0).await {
                             Ok(response) => {
                                 let message =
                                     format!("[Order] Binance Close Long Position Response: {:?}", response);
@@ -125,7 +125,7 @@ pub async fn execute_trade(
                     }
 
                     if bitmart_position == "SHORT" {
-                        match order.place_market_order_bitmart("XRPUSDT", "buy", 100.0).await {
+                        match order.place_market_order_bitmart("SOLUSDT", 2, 10).await {
                             Ok(response) => {
                                 let message =
                                     format!("[Order] Bitmart Close Short Position Response: {:?}", response);
@@ -135,7 +135,7 @@ pub async fn execute_trade(
                             Err(e) => eprintln!("[Order] Bitmart Close Short Position Failed: {}", e),
                         }
                     } else if bitmart_position == "LONG" {
-                        match order.place_market_order_bitmart("XRPUSDT", "sell", 100.0).await {
+                        match order.place_market_order_bitmart("SOLUSDT", 3, 10).await {
                             Ok(response) => {
                                 let message =
                                     format!("[Order] Bitmart Close Long Position Response: {:?}", response);
