@@ -1,0 +1,13 @@
+C:\Users\user\Desktop\src\rust-project\target\debug\deps\libsha2-8e1a6647aca92a16.rmeta: C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\lib.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\core_api.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\consts.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256\soft.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256\x86.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512\soft.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512\x86.rs
+
+C:\Users\user\Desktop\src\rust-project\target\debug\deps\sha2-8e1a6647aca92a16.d: C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\lib.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\core_api.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\consts.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256\soft.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256\x86.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512\soft.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512\x86.rs
+
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\lib.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\core_api.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\consts.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256\soft.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha256\x86.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512\soft.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\sha2-0.10.8\src\sha512\x86.rs:

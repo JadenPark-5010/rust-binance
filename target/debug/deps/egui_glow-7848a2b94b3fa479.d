@@ -1,0 +1,11 @@
+C:\Users\user\Desktop\src\rust-project\target\debug\deps\libegui_glow-7848a2b94b3fa479.rmeta: C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\lib.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\painter.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\misc_util.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader_version.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\vao.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader/vertex.glsl C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader/fragment.glsl
+
+C:\Users\user\Desktop\src\rust-project\target\debug\deps\egui_glow-7848a2b94b3fa479.d: C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\lib.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\painter.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\misc_util.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader_version.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\vao.rs C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader/vertex.glsl C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader/fragment.glsl
+
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\lib.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\painter.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\misc_util.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader_version.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\vao.rs:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader/vertex.glsl:
+C:\Users\user\.cargo\registry\src\index.crates.io-6f17d22bba15001f\egui_glow-0.22.0\src\shader/fragment.glsl:

@@ -202,3 +202,7 @@ Binance: 213.6900, Bitmart: 213.6400, Gap: 0.0234%
 [1734403997] Gap exceeds 0.02%. Executing trade.
 Binance: 213.7000, Bitmart: 213.7500, Gap: -0.0234%
 [1734403997] [Order] Binance Long Order Response: BinanceOrderResponse { symbol: "SOLUSDT", orderId: 86296700398, avgPrice: "0.00" }
+[1734532805] Closing positions. Entry Gap: inf%, Current Gap: -0.0046%, Reduction: inf%
+[1734532831] Gap exceeds 0.1%. Executing trade.
+Binance: 215.3100, Bitmart: 215.5300, Gap: -0.1021%
+[1734532831] [Order] Bitmart Short Order Response: BitmartOrderResponse { message: "Ok", code: 1000, data: Object {"order_id": Number(3000048843596336), "price": String("market price")} }

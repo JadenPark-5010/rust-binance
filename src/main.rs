@@ -11,6 +11,9 @@ use tokio_tungstenite::connect_async;
 use tokio::task;
 use futures::join;
 
+mod depth_price;
+use depth_price::PriceCalculator;
+
 // Library
 use std::sync::Arc;
 use std::collections::HashMap;
@@ -205,7 +208,15 @@ async fn calculate_position_value(shared_market_depth: Arc<Mutex<HashMap<String,
     println!("평균 숏 체결 가격 (BID): {}", avg_short_price);
 }
 
+async fn run_price_updates(calculator: PriceCalculator) {
+    let position_size = 1000.0; // Fixed position size in USDT
+    
+    loop {
+        calculator.check_and_execute_arbitrage().await;
 
+        tokio::time::sleep(Duration::from_millis(100)).await;
+    }
+}
 
 #[derive(Default)]
 struct TradingApp {
@@ -342,6 +353,36 @@ impl eframe::App for TradingApp {
                 }
             });
 
+            ui.group(|ui| {
+                ui.heading("Price Information");
+                if let Ok(prices) = self.prices.try_lock() {
+                    let binance_long = prices.get("Binance_Long").copied().unwrap_or_default();
+                    let binance_short = prices.get("Binance_Short").copied().unwrap_or_default();
+                    let bitmart_long = prices.get("Bitmart_Long").copied().unwrap_or_default();
+                    let bitmart_short = prices.get("Bitmart_Short").copied().unwrap_or_default();
+                    
+                    ui.horizontal(|ui| {
+                        ui.label(format!("Binance Long: ${:.4}", binance_long));
+                        ui.label(format!("Binance Short: ${:.4}", binance_short));
+                    });
+                    ui.horizontal(|ui| {
+                        ui.label(format!("Bitmart Long: ${:.4}", bitmart_long));
+                        ui.label(format!("Bitmart Short: ${:.4}", bitmart_short));
+                    });
+                    
+                    // Calculate and display both gaps
+                    let gap1 = (binance_short - bitmart_long) / bitmart_long * 100.0;
+                    let gap2 = (bitmart_short - binance_long) / binance_long * 100.0;
+                    
+                    ui.horizontal(|ui| {
+                        ui.label(format!("Binance Short - Bitmart Long Gap: {:.4}%", gap1));
+                    });
+                    ui.horizontal(|ui| {
+                        ui.label(format!("Bitmart Short - Binance Long Gap: {:.4}%", gap2));
+                    });
+                }
+            });
+
             ctx.request_repaint_after(Duration::from_millis(100));
         });
     }
@@ -353,9 +394,8 @@ async fn main() {
     let shared_prices: SharedPrices = Arc::new(Mutex::new(HashMap::new()));
     let shared_state: SharedState = Arc::new(Mutex::new(TradingState::default()));
     let shared_market_depth: Arc<Mutex<HashMap<String, Vec<DepthAllItem>>>> = Arc::new(Mutex::new(HashMap::new()));
-
     let client = Client::new();
-
+    
     // 주문 객체 생성
     let order = Arc::new(Order {
         client: client.clone(),
@@ -365,6 +405,20 @@ async fn main() {
         bitmart_secret_key: "a0de4a750bcd25302ff37ae719a9d03b841a4ca84a129d790b44d49ab8eaede1".to_string(),
         bitmart_memo: "bitmart-arbitrage".to_string(),
     });
+    
+    let price_update_shared_market_depth = Arc::clone(&shared_market_depth);
+    let price_update_shared_prices = Arc::clone(&shared_prices);
+    let price_update_shared_state = Arc::clone(&shared_state);
+    let price_update_order = Arc::clone(&order);
+    let calculator = PriceCalculator::new(
+        Arc::clone(&price_update_shared_market_depth),
+        Arc::clone(&price_update_shared_prices),
+        Arc::clone(&price_update_shared_state),
+        Arc::clone(&order),
+        1000.0, // 기본 포지션 사이즈
+    );
+    
+    tokio::spawn(run_price_updates(calculator));
 
     // Binance 가격 수신 스레드
     let binance_shared_prices = Arc::clone(&shared_prices);
